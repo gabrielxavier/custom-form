@@ -46,23 +46,14 @@ $.customForm = function( selector, settings ){
 			return customForm;
 		},
 		destroy: function( targets ){
+
 			$( targets ).each(function(){
+				$this = $(this);
 
-				// if( $(this).is('select') ){
-				// 	$(this).wrap('<div class="select-custom"></div>').parent().prepend('<span class="value"></span>');
-				// }
+				if( $this.is('select') || $this.is('input[type="file"]') )
+					$this.parent().find('.value').remove();
 
-				// if( $(this).is('input[type="file"]') ){
-				// 	$(this).wrap('<div class="file-custom"></div>').parent().prepend('<span class="value"></span>');
-				// }
-
-				// if( $(this).is('input[type="checkbox"]') ){
-				// 	$(this).wrap('<div class="checkbox-custom"></div>');
-				// }
-
-				// if( $(this).is('input[type="radio"]') ){
-				// 	$(this).wrap('<div class="radio-custom"></div>');
-				// }
+				$this.unwrap();
 
 			});
 
@@ -78,6 +69,8 @@ $.customForm = function( selector, settings ){
 		},
 		apply: function(targets)
 		{
+			customForm.functions.init(targets);
+			
 			return customForm;
 		},
 		_customSelect: function(event){
