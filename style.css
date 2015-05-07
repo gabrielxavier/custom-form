@@ -1,0 +1,240 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial;
+}
+
+h1 {
+	margin-bottom: 50px;
+}
+
+h2 {
+	margin: 30px 0 10px 0;
+}
+
+form {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.control-group {
+	width: 400px;
+	display: block;
+}
+.control-group + .control-group {
+	margin-top: 20px;
+}
+
+.control-group label  {
+	cursor: pointer;
+	display: inline-block;
+}
+
+.control-group label + label {
+	margin-left: 20px;
+}
+
+/* DEFAULTS ------------------------------------------------------- */
+
+/*.select,
+.checkbox,
+.radio {
+	opacity: 0;
+}
+*/
+.select-custom .select,
+.checkbox-custom .checkbox,
+.radio-custom .radio {
+	opacity: 1;
+}
+
+/* DEFAULTS ------------------------------------------------------- */
+
+/* SELECT STYLE --------------------------------------------------- */
+
+.select-custom {
+	height: 50px;
+	width: 100%;	
+	position: relative;
+	background: #999999;
+}
+	.select-custom:before {
+		content: '▼';
+		display: block;
+		position: absolute;
+		right: 20px;
+		top: 50%;
+		margin-top: -7px;
+	}
+
+.select-custom .value {
+	color: #fff;
+	font-size: 14px;
+	left: 0;
+	overflow: hidden;
+	right: 40px;
+	white-space: nowrap;
+	height: 100%;
+	line-height: 50px;
+	padding: 0 25px 0 15px; 
+	position: absolute;
+}
+
+.select-custom .select {
+	cursor: pointer;
+	color: #fff;
+	font-size: 14px;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	-webkit-appearance: menulist-button;
+	position: absolute;
+}
+
+.select-custom.hover,
+.select-custom.hover .select { background-color: #666666; }
+
+.select-custom.focus,
+.select-custom.focus .select { background-color: #333333; }
+
+.select-custom.open {}
+	.select-custom.open:before {
+		content: '▲';
+	}
+
+/* SELECT STYLE --------------------------------------------------- */
+
+/* FILE STYLE ----------------------------------------------------- */
+
+.file-custom {
+	height: 50px;
+	width: 100%;	
+	position: relative;
+	background: #999999;
+}
+	.file-custom:before {
+		content: '↑';
+		display: block;
+		position: absolute;
+		right: 20px;
+		top: 50%;
+		margin-top: -10px;
+	}
+
+.file-custom .value {
+	color: #fff;
+	font-size: 14px;
+	left: 0;
+	overflow: hidden;
+	right: 40px;
+	white-space: nowrap;
+	height: 100%;
+	line-height: 50px;
+	padding: 0 25px 0 15px; 
+	position: absolute;
+}
+
+.file-custom .file {
+	cursor: pointer;
+	color: #fff;
+	font-size: 14px;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	-webkit-appearance: menulist-button;
+	position: absolute;
+}
+
+.file-custom.hover,
+.file-custom.hover .select { background-color: #666666; }
+
+.file-custom.focus,
+.file-custom.focus .select { background-color: #333333; }
+
+.file-custom.open {}
+	.file-custom.open:before {
+	}
+
+/* FILE STYLE ----------------------------------------------------- */
+
+/* CHECKBOX STYLE ------------------------------------------------- */
+
+.checkbox-custom {
+	display: inline-block;
+	vertical-align: middle;
+	width: 20px;
+	height: 20px;
+	background: #999999;
+	position: relative;
+	border: 1px solid transparent;
+}
+	.checkbox-custom:before { 
+		position: absolute; 
+		content: ''; 
+		text-align: center; 
+		display: block; 
+		width: 100%; 
+		height: 100%;
+		left: 0;
+		top: 0;
+		color: #FFFFFF;
+	}
+
+.checkbox-custom .checkbox {
+	cursor: pointer;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+.checkbox-custom.hover 	 { background: #666666; }
+.checkbox-custom.checked { background: #333333; }
+	.checkbox-custom.checked:before { content: '■'; }
+
+/* CHECKBOX STYLE ------------------------------------------------- */
+
+/* RADIO STYLE ---------------------------------------------------- */
+
+.radio-custom {
+	display: inline-block;
+	vertical-align: middle;
+	width: 20px;
+	height: 20px;
+	background: #999999;
+	position: relative;
+	border-radius: 50%;
+	border: 1px solid transparent;
+}
+	.radio-custom:before {
+		position: absolute;
+		content: '';
+		text-align: center;
+		display: block;
+		width: 100%;
+		height: 100%;
+		color: #FFFFFF;
+	}
+
+.radio-custom .radio {
+	cursor: pointer;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+.radio-custom.hover 	{ background: #666666; }
+.radio-custom.checked { background: #333333; }
+	.radio-custom.checked:before { content: '●'; }
+
+/* RADIO STYLE --------------------------------------------------- */

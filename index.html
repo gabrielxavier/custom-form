@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Formulário Personalizado Exemplo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <form action="">
+            <h1>Formulário personalizado</h1>
+            
+            <h2>Checkbox</h2>
+            <div class="control-group">
+                <label for="checkbox-1">
+                    <input type="checkbox" id="checkbox-1" name="checkbox" class="checkbox" checked="checked">
+                    Opçao 1
+                </label>
+                <label for="checkbox-2">
+                    <input type="checkbox" id="checkbox-2" name="checkbox" class="checkbox">
+                    Opção 2
+                </label>
+             </div>
+            
+            <h2>Radio</h2>
+            <div class="control-group">
+                <label for="radio-1">
+                    <input type="radio" id="radio-1" name="radio" class="radio">
+                    Opção 1
+                </label>
+                <label for="radio-2">
+                    <input type="radio" id="radio-2" name="radio" class="radio" checked="checked">
+                    Opção 2
+                </label>
+            </div>
+            
+            <h2>Select</h2>
+            <div class="control-group">
+                <label for="select">
+                    Select
+                </label>
+                <select id="select" class="select">
+                    <option value="">Selecione</option>
+                    <option value="1">Primeira opção do select</option>
+                    <option value="2">Segunda opção do select</option>
+                </select>
+            </div>
+
+            <h2>File</h2>
+            <div class="control-group">
+                <label for="file">
+                    File
+                </label>
+                <input type="file" class="file" name="file" id="file">
+            </div>
+        </form>
+        
+        <script src="js/vendor/jquery-1.11.0.min.js"></script>
+        <script src="js/vendor/form-custom-1.0.js"></script>
+        <script>
+        $(document).ready(function(){
+            customForm = $.customForm('.checkbox, .select, .radio, .file');
+        });
+        </script>
+    </body>
+</html>
