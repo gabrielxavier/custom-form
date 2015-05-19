@@ -17,24 +17,26 @@ $.customForm = function( selector, settings ){
 			}else{
 					$( customForm.selector ).each(function(){
 
-						if( $(this).is('select') ){
-							$(this).wrap('<div class="select-custom"></div>').parent().prepend('<span class="value"></span>');
-							$(this).on('change.customForm', _customSelect).each( _customSelect );
+						$this = $(this);
+
+						if( $this.is('select') ){
+							$this.wrap('<div class="select-custom"></div>').parent().prepend('<span class="value"></span>');
+							$this.on('change.customForm', _customSelect).each( _customSelect );
 						}
 
-						if( $(this).is('input[type="file"]') ){
-							$(this).wrap('<div class="file-custom"></div>').parent().prepend('<span class="value"></span>');
-							$(this).on('change.customForm', _customFile).each( _customFile );
+						if( $this.is('input[type="file"]') ){
+							$this.wrap('<div class="file-custom"></div>').parent().prepend('<span class="value"></span>');
+							$this.on('change.customForm', _customFile).each( _customFile );
 						}
 
-						if( $(this).is('input[type="checkbox"]') ){
-							$(this).wrap('<div class="checkbox-custom"></div>');
-							$(this).on('click.customForm', _customCheckbox).each( _customCheckbox );
+						if( $this.is('input[type="checkbox"]') ){
+							$this.wrap('<div class="checkbox-custom"></div>');
+							$this.on('click.customForm', _customCheckbox).each( _customCheckbox );
 						}
 
-						if( $(this).is('input[type="radio"]') ){
-							$(this).wrap('<div class="radio-custom"></div>');
-							$(this).on('click.customForm', _customRadio).each( _customRadio );
+						if( $this.is('input[type="radio"]') ){
+							$this.wrap('<div class="radio-custom"></div>');
+							$this.on('click.customForm', _customRadio).each( _customRadio );
 						}
 		
 					});
