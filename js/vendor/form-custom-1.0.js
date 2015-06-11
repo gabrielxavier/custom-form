@@ -61,8 +61,8 @@ $.customForm = function( selector, settings ){
 	function _customFile(event)
 	{
 		$this = event.delegateTarget ? $(event.delegateTarget) : $(this);
-			
-		$this.parent().find('.value').text( $this.val() );
+		
+		$this.parent().find('.value').text( ($this.val()) ?  $this.val() : 'Nenhum arquivo selecionado.' );
 	}
 
 	function _customCheckbox(event)
